@@ -1,0 +1,37 @@
+%DO NOT TOUCH
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+
+
+\begin{document}
+%Name of the section, something like a week number or theme works great
+\section{Template}
+% Include your takeaways after the \item instead of Item 1, etc.
+\subsection{Takeaways}
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+%Copy the question from moodle into the brackets after \question{}, write your answer into the \answer{} brackets
+\subsection{Questions}
+\begin{itemize}
+    \question{How was your day?}
+    \answer{Good.}
+    \question{What did you do?}
+    \answer{Worked on this \LaTeX template}
+\end{itemize}
+%You can either write your rating here or if you want fraction \frac{}{}
+\subsection{Rating}
+\[\frac{9.5}{10}\]  my day was pretty good
+%If you want to include any pictures you can do it with this, if you want multiple just copy the whole block from \begin{figure} to \end{figure}
+\begin{figure}[bh]
+    \centering
+    %Put img into the img folder and just put its name into the second bracket and .format, if you want larger img change the width to something like 10cm 
+    \includegraphics[width=6cm]{cultured.jpg}
+    %If you want any caption put it here
+    \caption{\LaTeX \textgreater Word}
+    \label{img:foo}
+\end{figure}
+
+\end{document}

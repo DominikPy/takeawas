@@ -1,0 +1,42 @@
+%DO NOT TOUCH
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage{blindtext}
+\usepackage{subfiles}
+%DO NOT TOUCH
+\newcounter{question}
+\setcounter{question}{0}
+\numberwithin{question}{section}
+\newcommand{\question}[1]{\item[Q\refstepcounter{question}\thequestion.] \textit{#1}}
+\newcommand{\answer}[1]{\item[A\thequestion.] #1}
+\renewcommand{\thequestion}{\arabic{question}}
+
+%Here you setup the title page
+\title{My takeaway journal}
+\author{John Doe}
+\date{\today}
+
+%DO NOT TOUCH
+\AddToHook{cmd/section/before}{\clearpage}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+
+% This is where you will work most of the time
+% Loading each section 
+% Subfile takes adress as argument, if you keep my template it will always be in the sections folder so your section could look like \subfile{section/week1.tex}
+\subfile{sections/showcase.tex}
+
+
+
+
+\end{document}
